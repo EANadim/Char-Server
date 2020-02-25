@@ -85,23 +85,6 @@ DATABASES = {
     }
 }
 
-# #Channel layer settings
-#
-# CHANNEL_LAYERS = {
-#     # DEFAULT SETTING FOR DJANGO CHANNEL LAYER
-#     'default':{
-#         #BROKER THAT WE ARE USING
-#         'BACKEND': 'asgi_redis.RedisChannelLayer',
-#         #CONFIGURATION OF THE CHANNEL LIKE HOST AND CAPACITY OF EACH CHANNEL
-#         'CONFIG': {
-#             'hosts': [os.environ.get('REDIS_URL', 'redis://localhost:6379')],
-#             'capacity': 100
-#         },
-#         #TO WHERE THE INCOMING MESSAGES ARE GOING TO BE ROUTED
-#         'ROUTING': 'coinpricemonitor.routing.channel_routing'
-#     }
-# }
-
 ##CHANNEL LAYER SETTINGS
 ASGI_APPLICATION = 'My_app.routing.channel_route'
 CHANNEL_LAYERS = {

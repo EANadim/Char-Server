@@ -8,7 +8,7 @@ import chat.routing
 # the connection will be given to the AuthMiddlewareStack.
 
 channel_route = ProtocolTypeRouter({
-    "websocket" : AuthMiddlewareStack(
+    "websocket": AuthMiddlewareStack(
         URLRouter(
             chat.routing.websocket_urlpatterns
         )
